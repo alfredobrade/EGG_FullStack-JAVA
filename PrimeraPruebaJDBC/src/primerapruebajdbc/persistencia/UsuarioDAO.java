@@ -1,6 +1,7 @@
 
 package primerapruebajdbc.persistencia;
 
+import java.util.Collection;
 import primerapruebajdbc.dominio.usuario.Usuario;
 
 
@@ -12,7 +13,7 @@ public final class UsuarioDAO extends DAO {
             if (user == null){
                 throw new Exception("Debe indicar un usuario");
             }
-            String sql = "INSERT INTO Usuario (correoElectronico, clave)"
+            String sql = "INSERT INTO Usuario (correo_electronico, clave)"
                     +"VALUES ( '"+user.getCorreoElectronico()+" ' , '"
                     + user.getClave() +"' );";
             
@@ -38,6 +39,8 @@ public final class UsuarioDAO extends DAO {
             
             consultarBase(sql);
             Usuario user = null;
+            
+            
             while(resultado.next()){
                 user = new Usuario();
                 user.setId(resultado.getInt(1)); // columna 1 (empieza desde 1)
@@ -46,6 +49,7 @@ public final class UsuarioDAO extends DAO {
                 
             }
             
+            desconectarBase();
             return user;
             
         } catch (Exception e) {
@@ -58,4 +62,14 @@ public final class UsuarioDAO extends DAO {
         
     }
     
+    /* metodo para cargar varios usuarios en una lista
+    public Collection<Usuario> listarUsuarios() {
+        
+        
+        
+        
+        return usuarios;
+        
+    }
+    */
 }

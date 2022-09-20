@@ -1,15 +1,33 @@
 package primerapruebajdbc.dominio.usuario;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import primerapruebajdbc.persistencia.UsuarioDAO;
 
-/**
- *
- * @author USUARIO
- */
+
 public class Usuario_servicios {
+    
+    private UsuarioDAO dao;
+    
+    public Usuario_servicios(){
+        this.dao = new UsuarioDAO();
+    }
+    
+    public void crearUsuario(String correoElectronico, String clave) throws Exception {
+        
+        //agregar validaciones
+        
+            //creamos el usuario
+            Usuario user = new Usuario();
+            user.setCorreoElectronico(correoElectronico);
+            user.setClave(clave);
+            dao.guardarUsuario(user);
+        
+        
+        
+        
+    }
+    
+    
+    
+    
     
 }
