@@ -1,0 +1,18 @@
+[1mdiff --git a/PrimeraPruebaJDBC/nbproject/private/private.xml b/PrimeraPruebaJDBC/nbproject/private/private.xml[m
+[1mindex 722847e..6807a2b 100644[m
+[1m--- a/PrimeraPruebaJDBC/nbproject/private/private.xml[m
+[1m+++ b/PrimeraPruebaJDBC/nbproject/private/private.xml[m
+[36m@@ -2,12 +2,6 @@[m
+ <project-private xmlns="http://www.netbeans.org/ns/project-private/1">[m
+     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>[m
+     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">[m
+[31m-        <group>[m
+[31m-            <file>file:/I:/OneDrive/ESTUDIO/SISTEMAS/EGG%20EDUCATION/PROGRAMACION%20WEB%20FULL%20STACK/Egg%20Repositorio/PrimeraPruebaJDBC/src/primerapruebajdbc/persistencia/UsuarioDAO.java</file>[m
+[31m-            <file>file:/I:/OneDrive/ESTUDIO/SISTEMAS/EGG%20EDUCATION/PROGRAMACION%20WEB%20FULL%20STACK/Egg%20Repositorio/PrimeraPruebaJDBC/src/primerapruebajdbc/PrimeraPruebaJDBC.java</file>[m
+[31m-            <file>file:/I:/OneDrive/ESTUDIO/SISTEMAS/EGG%20EDUCATION/PROGRAMACION%20WEB%20FULL%20STACK/Egg%20Repositorio/PrimeraPruebaJDBC/src/primerapruebajdbc/dominio/usuario/Usuario.java</file>[m
+[31m-            <file>file:/I:/OneDrive/ESTUDIO/SISTEMAS/EGG%20EDUCATION/PROGRAMACION%20WEB%20FULL%20STACK/Egg%20Repositorio/PrimeraPruebaJDBC/src/primerapruebajdbc/persistencia/DAO.java</file>[m
+[31m-            <file>file:/I:/OneDrive/ESTUDIO/SISTEMAS/EGG%20EDUCATION/PROGRAMACION%20WEB%20FULL%20STACK/Egg%20Repositorio/PrimeraPruebaJDBC/src/primerapruebajdbc/dominio/usuario/Usuario_servicios.java</file>[m
+[31m-        </group>[m
+[32m+[m[32m        <group/>[m
+     </open-files>[m
+ </project-private>[m
