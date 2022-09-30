@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario
+    </title>
+</head>
+<body>
+    <header>
+        <h1>Haciendo un Formulario</h1>
+
+    </header>
+    <section>
+        <div>
+            <form action="/controlador-registro" method="POST" class="form-registro" enctype="multipart/form-data">
+                <div>
+                    <label for="nombre">nombre</label>
+                <input name="nombre" type="text" placeholder="Nombre y apellido" required>
+                </div>
+                <div>
+                    <label for="mail">correo electronico</label>
+                    <input name="mail" type="mail" placeholder="correo@mail.com" required>
+                </div>
+                <div>
+                    <label for="number">DNI</label>
+                    <input name="number" type="number" placeholder="23165487" required>
+                </div>
+                <div>
+                    <label for="contraseña">contraseña</label>
+                    <input name="contraseña" type="password" placeholder="tu password" required>
+                </div>
+                <div>
+                    <label for="femenino">femenino</label>
+                    <input name="femenino" type="radio" value="f">
+                    <label for="masculino">masculino</label>
+                    <input name="masculino" type="radio" value="m">
+                </div>
+                <div>
+                    <label for="femenino">femenino</label>
+                    <input name="femenino" type="checkbox" value="f">
+                    <label for="masculino">masculino</label>
+                    <input name="masculino" type="checkbox" value="m">
+                </div>
+                <div>
+                    <label for="pais">pais</label>
+                    <select name="pais" id="">
+                        <option value="arg">Arg</option>
+                        <option value="bra">Bra</option>
+                        <option value="pry">Pry</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">fecha</label>
+                    <input name="date" type="date">
+                </div>
+                <div>
+                    <label for="img"></label>
+                    <input name="img" type="file">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
