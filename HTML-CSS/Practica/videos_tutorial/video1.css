@@ -1,0 +1,16 @@
+h2{
+    color: green;
+}
+table{
+    
+    text-align: center;
+}
+img{
+    max-width: 49%;
+}
+#section_one p:first-of-type{
+    background-color: rgb(196, 96, 96);
+}
+.link:hover{
+    color: green;
+}

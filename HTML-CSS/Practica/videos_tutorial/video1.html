@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro HTML</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+    </style>
+    <link rel="stylesheet" href="video1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <ul>
+                <li><a href="/inicio" class="link">Inicio</a></li>
+                <li><a href="/nosotros" class="link">Nosotros</a></li>
+                <li><a href="/servicios" class="link">Servicios</a></li>
+                <li><a href="/contacto" class="link">Contacto</a></li>
+            </ul>
+            <h1 style="color: blueviolet;">Titulo de nuestra pagina</h1>
+        </nav>
+    </header>
+
+    <section id="section_one" class="section">
+        <div>
+            <form action="/controlador-registro" method="POST" class="form-registro" enctype="multipart/form-data">
+                <div>
+                    <label for="nombre">nombre</label>
+                <input name="nombre" type="text" placeholder="Nombre y apellido" required>
+                </div>
+                <div>
+                    <label for="mail">correo electronico</label>
+                    <input name="mail" type="mail" placeholder="correo@mail.com" required>
+                </div>
+                <div>
+                    <label for="number">DNI</label>
+                    <input name="number" type="number" placeholder="23165487" required>
+                </div>
+                <div>
+                    <label for="contraseña">contraseña</label>
+                    <input name="contraseña" type="password" placeholder="tu password" required>
+                </div>
+                <div>
+                    <label for="femenino">femenino</label>
+                    <input name="femenino" type="radio" value="f">
+                    <label for="masculino">masculino</label>
+                    <input name="masculino" type="radio" value="m">
+                </div>
+                <div>
+                    <label for="femenino">femenino</label>
+                    <input name="femenino" type="checkbox" value="f">
+                    <label for="masculino">masculino</label>
+                    <input name="masculino" type="checkbox" value="m">
+                </div>
+                <div>
+                    <label for="pais">pais</label>
+                    <select name="pais" id="">
+                        <option value="arg">Arg</option>
+                        <option value="bra">Bra</option>
+                        <option value="pry">Pry</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">fecha</label>
+                    <input name="date" type="date">
+                </div>
+                <div>
+                    <label for="img"></label>
+                    <input name="img" type="file">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <br>
+        </div>
+        
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_960_720.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/15/32/laptop-1839876_960_720.jpg" alt="">
+        
+        <h2>Titular de la seccion</h2>
+        <p>
+            aca tenermos un parrafo de cualquier cosa/aca tenermos un parrafo de cualquier cosa/aca tenermos un parrafo de cualquier cosa/aca tenermos un parrafo de cualquier cosa /aca tenermos un parrafo de cualquier cosa/aca tenermos un parrafo de cualquier cosa/aca tenermos un parrafo de cualquier cosa/aca tenermos un parrafo de cualquier cosa
+        </p>
+    </section>
+    <table border="1"  bgcolor="grey" style="width:100%">
+        <caption>tabla 1</caption>
+        <thead>
+            <h2>Titulo de la tabla</h2>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>pancho</td>
+                <td>brade</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>juan</td>
+                <td>perez</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>hola</td>
+                <td>mundo</td>
+                <td>654</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="1"  bgcolor="green" style="width:100%">
+        <caption>tabla 2</caption>
+        <thead>
+            <h2>Titulo de otra tabla</h2>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Nombre</th>
+                <td>pancho</td>
+                <td>juan</td>
+                <td>hola</td>
+            </tr>
+            <tr>
+                <th>apellido</th>
+                <td>brade</td>
+                <td>perez</td>
+                <td>mundo</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <div>
+        <h4>Encabezado de menor jerarquia</h4>
+        <span>esta etiqueta tiene menos relevancia que la etiqueta p / esta etiqueta tiene menos relevancia que la etiqueta p/ esta etiqueta tiene menos relevancia que la etiqueta p/ esta etiqueta tiene menos relevancia que la etiqueta p / esta etiqueta tiene menos relevancia que la etiqueta p/ esta etiqueta tiene menos relevancia que la etiqueta p</span>
+    </div>
+    <footer>
+        
+        <ol>
+            <li><a href="/inicio">Inicio</a></li>
+            <li><a href="/nosotros">Nosotros</a></li>
+            <li><a href="/servicios">Servicios</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+        </ol>
+    </footer>
+</body>
+</html>
