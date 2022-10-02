@@ -9,8 +9,34 @@ img{
     max-width: 49%;
 }
 #section_one p:first-of-type{
+
     background-color: rgb(196, 96, 96);
 }
 .link:hover{
     color: green;
+   
+}
+p:hover{
+    color: rgb(131, 11, 11);
+}
+.tablita{
+    border-radius: 20px;
+}
+#section_one p:hover{
+    background-color: skyblue;
+}
+.prueba_block{
+    background: salmon;
+    width: 200px;
+    height: 200px;
+}
+
+a{
+    background: skyblue;
+    margin: 20px;
+}
+#botonsito{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
 }
