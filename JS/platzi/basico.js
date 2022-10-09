@@ -78,4 +78,34 @@ console.log(vector);
 console.log(vector[1]);
 
 var prueba = ['a','b', 'c','d'];
+// metodos final - push pop
+//metodos inicio - unshift shift
+// obtener el index - indexOf
 
+//--- loops
+/*
+ for - recorre un bloque de código varias veces
+ for/in - recorre las propiedades de un objeto
+ for/of - recorre los valores de un objeto iterable
+ while - recorre un bloque de código mientras se cumple una condición específica
+ do/while - también recorre un bloque de código mientras se cumple una condición específica
+*/
+
+// --- objetos
+var auto = {
+    marca: "toyota",
+    modelo: "corolla",
+    year: 2020,
+    detalleAuto: function(){
+        console.log(`Auto ${this.modelo} ${this.year}`);
+    }
+
+};
+
+function moto(marca, modelo, year) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.year = year;
+}
+
+var moto = new moto("bmw","gs",2020);
