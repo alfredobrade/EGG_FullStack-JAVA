@@ -70,11 +70,11 @@ public class EditorialSerivicios {
         
     }
 
-    /* porque me crea este metodo aca???
+    // porque me crea este metodo aca???
     private void MyException(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    */
+    
 
     
 }

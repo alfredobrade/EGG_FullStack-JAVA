@@ -94,11 +94,11 @@ public class LibroServicios {
         
     }
     
-    /* porque me crea este metodo aca???
+    // porque me crea este metodo aca???
     private void MyException(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    */
+    
     
     private void validar(Long isbn, String titulo, Integer ejemplares, String idAutor, String idEditorial) throws MyException{
         
