@@ -7,7 +7,7 @@ package com.egg.biblioteca.servicios;
 
 import com.egg.biblioteca.entidades.Autor;
 import com.egg.biblioteca.entidades.Editorial;
-import com.egg.biblioteca.exceptions.MyException;
+import com.egg.biblioteca.exceptions.MiException;
 import com.egg.biblioteca.repositorios.EditorialRepositorio;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 //servicios de la entidad Editorial
 @Service
-public class EditorialSerivicios {
+public class EditorialServicios {
 
     @Autowired
     EditorialRepositorio editorialRepositorio;
@@ -61,7 +61,7 @@ public class EditorialSerivicios {
         
     }
     
-    private void validar(String id, String nombre) throws MyException{
+    private void validar(String id, String nombre) throws MiException{
         
         if (id == null) MyException("El isbn no puede ser nulo");
         if (nombre.isEmpty() || nombre == null) MyException("El titulo no puede ser nulo o estar vacio");

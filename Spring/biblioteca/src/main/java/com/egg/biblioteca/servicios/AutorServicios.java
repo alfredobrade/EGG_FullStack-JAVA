@@ -7,6 +7,7 @@ package com.egg.biblioteca.servicios;
 
 import com.egg.biblioteca.entidades.Autor;
 import com.egg.biblioteca.entidades.Libro;
+import com.egg.biblioteca.exceptions.MiException;
 import com.egg.biblioteca.repositorios.AutorRepositorio;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,10 @@ public class AutorServicios {
     AutorRepositorio autorRepositorio;
     
     @Transactional
-    public void crarAutor(String nombre){
+    public void crarAutor(String nombre)throws MiException, Exception{
+        
+        validar(nombre);
+        
         Autor autor = new Autor();
         
         autor.setNombre(nombre);
@@ -33,6 +37,8 @@ public class AutorServicios {
     
     public List<Autor> listaAutores(){
         
+        
+        
         List<Autor> autores = new ArrayList();
         
         autores = autorRepositorio.findAll();
@@ -41,7 +47,9 @@ public class AutorServicios {
     }
     
     @Transactional
-    public void modificarAutor(String nombre, String id){
+    public void modificarAutor(String nombre, String id) throws Exception{
+        
+        validar(nombre);
         
         Optional<Autor> respuesta = autorRepositorio.findById(id);
         
@@ -53,5 +61,22 @@ public class AutorServicios {
             autorRepositorio.save(autor);
         }
     }
+    
+    //porque pone 2 excepciones si una ya esta dentro de la otra -- me dice que sino le meta un "try n catch"
+    private void validar(String nombre) throws MiException, Exception{
+        
+        if (nombre.isEmpty() || nombre == null) {
+            throw MiException("el nombre no puede estar vacio");
+            
+        }
+        
+    }
+    
+    //no se porque aparece asi la exception
+    private Exception MiException(String el_nombre_no_puede_estar_vacio) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
     
 }

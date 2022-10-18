@@ -6,9 +6,9 @@
 package com.egg.biblioteca.exceptions;
 
 
-public class MyException extends Exception{
+public class MiException extends Exception{
 
-    public MyException(String msg) {
+    public MiException(String msg) {
         super(msg);
     }
     

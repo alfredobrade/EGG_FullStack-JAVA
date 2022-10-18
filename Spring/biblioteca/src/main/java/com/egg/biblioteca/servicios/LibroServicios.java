@@ -8,7 +8,7 @@ package com.egg.biblioteca.servicios;
 import com.egg.biblioteca.entidades.Autor;
 import com.egg.biblioteca.entidades.Editorial;
 import com.egg.biblioteca.entidades.Libro;
-import com.egg.biblioteca.exceptions.MyException;
+import com.egg.biblioteca.exceptions.MiException;
 import com.egg.biblioteca.repositorios.AutorRepositorio;
 import com.egg.biblioteca.repositorios.EditorialRepositorio;
 import com.egg.biblioteca.repositorios.LibroRepositorio;
@@ -34,7 +34,7 @@ public class LibroServicios {
     private EditorialRepositorio editorialRepositorio;
     
     @Transactional
-    public void crearLibro(Long isbn, String titulo, Integer ejemplares, String idAutor, String idEditorial) throws MyException{
+    public void crearLibro(Long isbn, String titulo, Integer ejemplares, String idAutor, String idEditorial) throws MiException{
         
         validar(isbn, titulo, ejemplares, idAutor, idEditorial);
         
@@ -65,7 +65,7 @@ public class LibroServicios {
     }
     
     @Transactional
-    public void modificarLibro(Long isbn, String titulo, String idAutor, String idEditorial, Integer ejemplares) throws MyException{
+    public void modificarLibro(Long isbn, String titulo, String idAutor, String idEditorial, Integer ejemplares) throws MiException{
         
         validar(isbn, titulo, ejemplares, idAutor, idEditorial);
         
@@ -96,18 +96,18 @@ public class LibroServicios {
     }
     
     // porque me crea este metodo aca???
-    private void MyException(String string) {
+    private void MiException(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
-    private void validar(Long isbn, String titulo, Integer ejemplares, String idAutor, String idEditorial) throws MyException{
+    private void validar(Long isbn, String titulo, Integer ejemplares, String idAutor, String idEditorial) throws MiException{
         
-        if (isbn == null) MyException("El isbn no puede ser nulo");
-        if (titulo.isEmpty() || titulo == null) MyException("El titulo no puede ser nulo o estar vacio");
-        if (ejemplares == null) MyException("Los ejemplares no puede ser nulo");
-        if (idAutor == null) MyException("El idAutor no puede ser nulo");
-        if (idEditorial == null) MyException("El idEditorial no puede ser nulo");
+        if (isbn == null) MiException("El isbn no puede ser nulo");
+        if (titulo.isEmpty() || titulo == null) MiException("El titulo no puede ser nulo o estar vacio");
+        if (ejemplares == null) MiException("Los ejemplares no puede ser nulo");
+        if (idAutor == null) MiException("El idAutor no puede ser nulo");
+        if (idEditorial == null) MiException("El idEditorial no puede ser nulo");
         
         
     }
