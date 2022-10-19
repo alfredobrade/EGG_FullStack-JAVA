@@ -9,10 +9,9 @@ import com.egg.biblioteca.exceptions.MiException;
 import com.egg.biblioteca.servicios.AutorServicios;
 import com.egg.biblioteca.servicios.EditorialServicios;
 import com.egg.biblioteca.servicios.LibroServicios;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,16 +35,20 @@ public class LibroControlador {
     }
     
     @PostMapping("/registro")
-    public String registro(@RequestParam Long isbn, @RequestParam String titulo, @RequestParam Integer ejemplares, @RequestParam String idAutor, @RequestParam String ideditorial){
+    public String registro(@RequestParam(required=false) Long isbn, @RequestParam String titulo,
+            @RequestParam(required=false) Integer ejemplares, @RequestParam String idAutor, 
+            @RequestParam String ideditorial, ModelMap modelo){
         
         try {
             libroServicio.crearLibro(isbn, titulo, ejemplares, idAutor, ideditorial); //si todo sale bioen retornamos al
+            
+            modelo.put("exito", "El libro fue cargado correctamente");
         } catch (MiException ex) {
-            Logger.getLogger(LibroControlador.class.getName()).log(Level.SEVERE, null, ex);
+            modelo.put("error", ex.getMessage());
             return "libro_forms.html"; //volvemos a cargar el formulario
         }
         
-        return "";
+        return "index.html";
     }
     
     
