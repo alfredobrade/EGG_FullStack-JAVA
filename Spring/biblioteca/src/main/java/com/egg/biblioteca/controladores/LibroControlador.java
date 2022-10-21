@@ -5,10 +5,13 @@
  */
 package com.egg.biblioteca.controladores;
 
+import com.egg.biblioteca.entidades.Autor;
+import com.egg.biblioteca.entidades.Editorial;
 import com.egg.biblioteca.exceptions.MiException;
 import com.egg.biblioteca.servicios.AutorServicios;
 import com.egg.biblioteca.servicios.EditorialServicios;
 import com.egg.biblioteca.servicios.LibroServicios;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -29,7 +32,15 @@ public class LibroControlador {
     private EditorialServicios editorialServicio;
     
     @GetMapping("/registrar") // localhost:8080/libro/registrar
-    public String registrar(){
+    public String registrar(ModelMap modelo){
+        List<Autor> autores = autorServicio.listaAutores();
+        List<Editorial> editoriales = editorialServicio.listaEditoriales();
+        
+        // esto para que era?
+        
+        modelo.addAttribute("autores", autores);
+        modelo.addAttribute("editoriales", editoriales);
+        
         
         return "libro_forms.html";
     }
